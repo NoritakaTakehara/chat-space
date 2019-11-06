@@ -6,8 +6,10 @@
 |email|string|null: false, unique: true|
 |password|string|null: false|
 ### Association
-- has_many :messages, groups_users
+- has_many :groups_users
 - has_many :groups,  through:  :groups_users
+- has_many :messages
+
 
 ## messagesテーブル
 |Column|Type|Options|
@@ -23,10 +25,11 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, unique: true|
+|name|string|null: false, unique: true|
 ### Association
-- has_many :messages, groups_users
+- has_many :groups_users
 - has_many  :users,  through:  :groups_users
+- has_many  :messages
 
 ## groups_usersテーブル
 |Column|Type|Options|
