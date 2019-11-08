@@ -1,0 +1,23 @@
+.main_contents
+  .main_contents__head
+    .main_contents__head___left
+      .group_name group name
+      .member group member
+    .heaer_right
+      .edit_btn Edit
+  .main_content
+    .content_one
+      %p.post_name test-user
+      %p.date 2019/11/07/14:31:00
+    .post_text こんにちは
+  .form
+    %form.new_message
+      .input-box
+        %input{ type: "text", placeholder: "type a message", class: "input_text"}
+        %label
+          %i.fa.fa-image
+          %input{type: "file",class: "input_file"}
+      %input{ type: "submit", value: "Send", class: "submit-btn" }
+      
+
+
