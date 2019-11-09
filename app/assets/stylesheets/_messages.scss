@@ -1,0 +1,174 @@
+.wrapper {
+  display: flex;
+}
+
+.chat-side {
+  width: 300px;
+  color: #FFFFFF; 
+}
+.side-header {
+  background-color: #253141;
+  height: 100px; 
+  display: flex;
+  align-items: center;
+  padding : 0 20px;
+}
+
+.side-header__box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.user_name {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.icon {
+  text-decoration: none;
+}
+
+.icon:link {
+  color: #FFFFFF;
+}
+
+.icon:visited {
+  color: #FFFFFF;
+}
+
+.main {
+  background: #2f3e51;
+  height: calc(100vh - 100px);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.test_group {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.test.message {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+
+.main_contents {
+  background-color: #fafafa;
+  width: calc( 100vw - 300px);
+  &__head {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: thin solid #eeeeee;
+    padding: 0 40px;
+    &__left {
+    }
+  }
+}
+
+.group_name {
+  font-size: 20px;
+  color: #333333; 
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+.member {
+  font-size: 12px;
+  color: #999999;
+}
+
+.edit_btn {
+  margin-top: 28px;
+  color: #38aef0;
+  font-size: 20px;
+  border: 1px solid #38aef0;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+
+
+.main_content {
+  margin-left: 40px;
+  height: calc( 100vh - 190px );
+}
+
+.post_name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #434A54;
+  margin: 46px 0 10px;
+}
+
+.date {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 10px;
+  margin-top: 46px;
+}
+
+.post_text {
+  font-size: 14px;
+  color: #434A54;
+}
+
+.content_one {
+  display: flex;
+}
+
+.form {
+  height: 90px;
+  background-color: #ddd;
+  position: relative;
+}
+
+.new_message {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.input-box {
+  height: 50px;
+  padding: 20px 0 20px 40px;
+  width: 100%;
+}
+
+.input_text {
+  font-size: 16px;
+  color: #434a54;
+  height: 50px;
+  width: 100% ;
+}
+
+.fa-image {
+  font-size: 1.4rem;
+  position: absolute ;
+  bottom: 30px;
+  right: 160px;
+}
+
+.input_file {
+  display: none;
+}
+
+.submit-btn {
+  background-color: #38aef0;
+  width: 100px;
+  height: 50px;
+  color: #FFFFFF;
+  cursor: pointer;
+  margin: 20px 40px 20px 15px;
+  padding: 0 30px;
+}
+
+input::placeholder {
+  padding-left: 10px;
+}
