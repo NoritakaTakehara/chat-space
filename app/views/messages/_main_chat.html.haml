@@ -1,23 +1,26 @@
-.main_contents
-  .main_contents__head
-    .main_contents__head___left
-      .group_name group name
-      .member group member
-    .heaer_right
-      .edit_btn Edit
-  .main_content
-    .content_one
-      %p.post_name test-user
-      %p.date 2019/11/07/14:31:00
-    .post_text こんにちは
-  .form
-    %form.new_message
-      .input-box
-        %input{ type: "text", placeholder: "type a message", class: "input_text"}
-        %label
-          %i.fa.fa-image
-          %input{type: "file",class: "input_file"}
-      %input{ type: "submit", value: "Send", class: "submit-btn" }
+.chat
+  .header
+    .left-header
+      - @group.users.each do |user|
+        .left-header__title
+          = @group.name
+        %ul.left-header__members
+          Member：
+          %li.member
+            = user.name
+    .right-header
+      = link_to edit_user_path(current_user) do
+        .right-header__btn
+          edit
+      -# = link_to "Edit",edit_user_path(current_user),class: "right-header__btn" do
       
-
-
+  .messages
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
