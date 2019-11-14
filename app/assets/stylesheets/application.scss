@@ -1,5 +1,7 @@
 @import "config/colors";
+@import "config/font-size";
 @import "config/reset";
+@import "mixins/vendor_prefix";
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "messages/messages.scss";
