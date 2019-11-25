@@ -9,10 +9,9 @@
           %li.member
             = user.name
     .right-header
-      = link_to edit_user_path(current_user) do
+      = link_to edit_group_path(@group.id) do
         .right-header__btn
           edit
-      -# = link_to "Edit",edit_user_path(current_user),class: "right-header__btn" do
       
   .messages
     = render @messages
